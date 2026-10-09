@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es" data-exercise-id="03-html-table-navigation" data-exercise-title="Solucion · Tabla de datos y navegacion">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solucion · Tabla de datos</title>
+    <link rel="stylesheet" href="/shared/base.css">
+    <link rel="stylesheet" href="/shared/exercise-shell.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="/shared/exercise-nav.mjs"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#inventory">Saltar al inventario</a>
+    <main class="container exercise-shell">
+      <section class="exercise-intro card">
+        <h1>Inventario</h1>
+        <p>Estado actual de productos almacenados.</p>
+      </section>
+
+      <section class="exercise-workspace card">
+        <div class="table-scroll">
+          <table id="inventory">
+            <caption>Inventario de productos a 7 de octubre de 2026</caption>
+            <thead>
+              <tr>
+                <th scope="col">Producto</th>
+                <th scope="col">Categoria</th>
+                <th scope="col">Stock</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Accion</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Teclado mecanico</th>
+                <td>Perifericos</td>
+                <td>18</td>
+                <td><span class="status status--ok">Disponible</span></td>
+                <td><a href="#edit-keyboard">Editar</a></td>
+              </tr>
+              <tr>
+                <th scope="row">Monitor 27 pulgadas</th>
+                <td>Monitores</td>
+                <td>2</td>
+                <td><span class="status status--warning">Stock bajo</span></td>
+                <td><a href="#edit-monitor">Editar</a></td>
+              </tr>
+              <tr>
+                <th scope="row">Webcam Full HD</th>
+                <td>Video</td>
+                <td>0</td>
+                <td><span class="status status--danger">Agotado</span></td>
+                <td><a href="#edit-webcam">Editar</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

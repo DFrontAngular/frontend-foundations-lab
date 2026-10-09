@@ -1,0 +1,63 @@
+.dashboard {
+  display: grid;
+  grid-template-areas:
+    "metrics"
+    "activity"
+    "next";
+  gap: var(--space-4);
+}
+
+.metrics {
+  grid-area: metrics;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+  gap: var(--space-4);
+}
+
+.metric,
+.activity,
+.next {
+  padding: var(--space-5);
+}
+
+.metric span,
+.metric small {
+  display: block;
+  color: var(--color-text-muted);
+}
+
+.metric strong {
+  display: block;
+  margin-block: var(--space-2);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+}
+
+.activity {
+  grid-area: activity;
+}
+
+.activity ol {
+  display: grid;
+  gap: var(--space-3);
+  padding-left: 1.3rem;
+}
+
+.next {
+  grid-area: next;
+}
+
+.next ul {
+  display: grid;
+  gap: var(--space-3);
+  padding-left: 1.2rem;
+}
+
+@media (min-width: 50rem) {
+  .dashboard {
+    grid-template-columns: minmax(0, 2fr) minmax(16rem, 0.8fr);
+    grid-template-areas:
+      "metrics metrics"
+      "activity next";
+    align-items: start;
+  }
+}

@@ -1,0 +1,50 @@
+.table-scroll {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  min-width: 42rem;
+  border-collapse: collapse;
+}
+
+caption {
+  padding-bottom: 1rem;
+  text-align: left;
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+th,
+td {
+  padding: 0.85rem;
+  border-bottom: 1px solid var(--color-border);
+  text-align: left;
+}
+
+thead th {
+  background: var(--color-surface-muted);
+}
+
+tbody tr:hover {
+  background: color-mix(in srgb, var(--color-primary) 5%, var(--color-surface));
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 750;
+}
+
+.status::before {
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 50%;
+  background: currentColor;
+  content: '';
+}
+
+.status--ok { color: var(--color-success); }
+.status--warning { color: var(--color-warning); }
+.status--danger { color: var(--color-danger); }

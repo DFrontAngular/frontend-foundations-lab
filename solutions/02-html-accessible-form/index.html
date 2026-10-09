@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es" data-exercise-id="02-html-accessible-form" data-exercise-title="Solucion · Formulario accesible">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solucion · Formulario accesible</title>
+    <link rel="stylesheet" href="/shared/base.css">
+    <link rel="stylesheet" href="/shared/exercise-shell.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="/shared/exercise-nav.mjs"></script>
+  </head>
+  <body>
+    <main class="container exercise-shell">
+      <section class="exercise-intro card">
+        <p>HTML y accesibilidad</p>
+        <h1>Alta en el programa de formacion</h1>
+        <p>Los campos marcados como obligatorios deben completarse antes de enviar.</p>
+      </section>
+
+      <section class="exercise-workspace card">
+        <form class="registration-form" action="#success" method="get">
+          <div class="field">
+            <label for="full-name">Nombre completo <span aria-hidden="true">*</span></label>
+            <input id="full-name" name="fullName" autocomplete="name" minlength="3" required>
+          </div>
+
+          <div class="field">
+            <label for="email">Correo corporativo <span aria-hidden="true">*</span></label>
+            <input id="email" name="email" type="email" autocomplete="email" aria-describedby="email-hint" required>
+            <p id="email-hint" class="field__hint">Usaremos esta direccion para las convocatorias.</p>
+          </div>
+
+          <div class="field">
+            <label for="start-date">Fecha de incorporacion <span aria-hidden="true">*</span></label>
+            <input id="start-date" name="startDate" type="date" min="2020-01-01" required>
+          </div>
+
+          <div class="field">
+            <label for="experience">Nivel de experiencia <span aria-hidden="true">*</span></label>
+            <select id="experience" name="experience" required>
+              <option value="">Selecciona una opcion</option>
+              <option value="none">Sin experiencia</option>
+              <option value="junior">Menos de un año</option>
+              <option value="mid">Uno a tres años</option>
+            </select>
+          </div>
+
+          <fieldset>
+            <legend>Disponibilidad preferida <span aria-hidden="true">*</span></legend>
+            <label><input type="radio" name="schedule" value="morning" required> Mañana</label>
+            <label><input type="radio" name="schedule" value="afternoon"> Tarde</label>
+          </fieldset>
+
+          <label class="terms">
+            <input type="checkbox" name="terms" required>
+            <span>Acepto las normas del programa <span aria-hidden="true">*</span></span>
+          </label>
+
+          <button class="button" type="submit">Enviar solicitud</button>
+        </form>
+        <p id="success" class="success-message">El navegador validara el formulario antes de navegar hasta este mensaje.</p>
+      </section>
+    </main>
+  </body>
+</html>

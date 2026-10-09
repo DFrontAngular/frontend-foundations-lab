@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es" data-exercise-id="01-html-semantic-page" data-exercise-title="Solucion · Pagina semantica">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solucion · Pagina semantica</title>
+    <link rel="stylesheet" href="/shared/base.css">
+    <link rel="stylesheet" href="/shared/exercise-shell.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="/shared/exercise-nav.mjs"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="brand" href="/">Web Platform Notes</a>
+        <nav aria-label="Principal">
+          <ul class="site-nav">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#articulos">Articulos</a></li>
+            <li><a href="#recursos">Recursos</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="inicio" class="container content">
+      <article id="articulos" class="article card">
+        <header>
+          <p class="eyebrow">Fundamentos frontend</p>
+          <h1>Por que aprender la plataforma antes del framework</h1>
+          <p class="metadata">Publicado el <time datetime="2026-10-07">7 de octubre de 2026</time></p>
+        </header>
+
+        <section aria-labelledby="abstractions-title">
+          <h2 id="abstractions-title">Las abstracciones son mas utiles cuando sabemos que abstraen</h2>
+          <p>HTML, CSS y JavaScript forman el entorno de ejecucion real de cualquier aplicacion Angular.</p>
+        </section>
+
+        <section aria-labelledby="debug-title">
+          <h2 id="debug-title">Una base que permite depurar</h2>
+          <p>Cuando aparece un fallo de eventos, red o layout, el framework no elimina la necesidad de entender el navegador.</p>
+        </section>
+
+        <a class="button" href="https://developer.mozilla.org/" rel="noreferrer">Leer documentacion de la plataforma</a>
+      </article>
+
+      <aside id="recursos" class="related card" aria-labelledby="related-title">
+        <h2 id="related-title">Recursos relacionados</h2>
+        <ul>
+          <li><a href="#html">HTML semantico</a></li>
+          <li><a href="#dom">Eventos del DOM</a></li>
+          <li><a href="#fetch">Fetch API</a></li>
+        </ul>
+      </aside>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container"><p>Frontend Foundations Lab</p></div>
+    </footer>
+  </body>
+</html>
